@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle",
+      "count": 1
+    },
+    {
+      "item": "tconstruct:sky_slime_ball",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "tinkersmastermind:sticky_potion",
+    "count": 1
+  }
+}

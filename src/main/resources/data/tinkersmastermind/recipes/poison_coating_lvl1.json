@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tinkersmastermind:sticky_potion",
+      "count": 1
+    },
+    {
+      "item": "minecraft:spider_eye",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "tinkersmastermind:poison_coating_lvl1",
+    "count": 1
+  }
+}

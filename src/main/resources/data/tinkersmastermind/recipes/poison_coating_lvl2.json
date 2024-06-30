@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tinkersmastermind:poison_coating_lvl1",
+      "count": 1
+    },
+    {
+      "item": "minecraft:pufferfish",
+      "count": 1
+    }
+  ],
+  "result": {
+    "item": "tinkersmastermind:poison_coating_lvl2",
+    "count": 1
+  }
+}
