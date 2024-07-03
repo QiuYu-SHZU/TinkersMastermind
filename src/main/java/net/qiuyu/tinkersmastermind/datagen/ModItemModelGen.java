@@ -27,6 +27,9 @@ public class ModItemModelGen extends ItemModelProvider {
         itemGeneratedModel(TinkersMastermindItems.poison_coating_lvl1.get(), resourceItem((itemName(TinkersMastermindItems.poison_coating_lvl1.get()))));
         itemGeneratedModel(TinkersMastermindItems.poison_coating_lvl2.get(), resourceItem((itemName(TinkersMastermindItems.poison_coating_lvl2.get()))));
         itemGeneratedModel(TinkersMastermindItems.poison_coating_lvl3.get(), resourceItem((itemName(TinkersMastermindItems.poison_coating_lvl3.get()))));
+        itemGeneratedModel(TinkersMastermindItems.flame_coating_lvl1.get(), resourceItem((itemName(TinkersMastermindItems.flame_coating_lvl1.get()))));
+        itemGeneratedModel(TinkersMastermindItems.flame_coating_lvl2.get(), resourceItem((itemName(TinkersMastermindItems.flame_coating_lvl2.get()))));
+        itemGeneratedModel(TinkersMastermindItems.flame_coating_lvl3.get(), resourceItem((itemName(TinkersMastermindItems.flame_coating_lvl3.get()))));
 
     }
 

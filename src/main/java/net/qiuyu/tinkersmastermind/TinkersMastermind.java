@@ -15,6 +15,7 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import net.qiuyu.tinkersmastermind.creativetabs.TinkersMastermindItemGroup;
 import net.qiuyu.tinkersmastermind.creativetabs.TinkersMastermindToolGroup;
 import net.qiuyu.tinkersmastermind.recipe.ModRecipes;
+import net.qiuyu.tinkersmastermind.register.TinkersMastermindEffect;
 import net.qiuyu.tinkersmastermind.register.TinkersMastermindItems;
 import net.qiuyu.tinkersmastermind.register.TinkersMastermindModifiers;
 
@@ -31,6 +32,7 @@ public class TinkersMastermind {
         MinecraftForge.EVENT_BUS.register(this);
         TinkersMastermindItems.ITEMS.register(bus);
         TinkersMastermindModifiers.MODIFIERS.register(bus);
+        TinkersMastermindEffect.EFFECTS.register(bus);
         ModRecipes.register(bus);
 
 

@@ -20,6 +20,9 @@ public class TinkersMastermindItems {
     public static RegistryObject<Item> poison_coating_lvl1 = ITEMS.register("poison_coating_lvl1", TinkersMastermindItems::register_item);
     public static RegistryObject<Item> poison_coating_lvl2 = ITEMS.register("poison_coating_lvl2", TinkersMastermindItems::register_item);
     public static RegistryObject<Item> poison_coating_lvl3 = ITEMS.register("poison_coating_lvl3", TinkersMastermindItems::register_item);
+    public static RegistryObject<Item> flame_coating_lvl1 = ITEMS.register("flame_coating_lvl1", TinkersMastermindItems::register_item);
+    public static RegistryObject<Item> flame_coating_lvl2 = ITEMS.register("flame_coating_lvl2", TinkersMastermindItems::register_item);
+    public static RegistryObject<Item> flame_coating_lvl3 = ITEMS.register("flame_coating_lvl3", TinkersMastermindItems::register_item);
 
 
     public static BlockItem register_block(Block block) {
