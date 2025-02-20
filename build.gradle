@@ -3,14 +3,11 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'net.neoforged.moddev.legacyforge' version '2.0.76'
+
 }
 
 tasks.named('wrapper', Wrapper).configure {
-    // Define wrapper values here so as to not have to always do so when updating gradlew.properties.
-    // Switching this to Wrapper.DistributionType.ALL will download the full gradle sources that comes with
-    // documentation attached on cursor hover of gradle classes and methods. However, this comes with increased
-    // file size for Gradle. If you do switch this to ALL, run the Gradle wrapper task twice afterwards.
-    // (Verify by checking gradle/wrapper/gradle-wrapper.properties to see if distributionUrl now points to `-all`)
+
     distributionType = Wrapper.DistributionType.BIN
 }
 
@@ -138,6 +135,11 @@ obfuscation {
 }
 
 dependencies {
+    // compile against the JEI API but do not include it at runtime
+    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
+    // at runtime, use the full JEI jar
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"
     modImplementation "slimeknights.tconstruct:TConstruct:1.20.1-${tcon_version}"
     modImplementation "slimeknights.mantle:Mantle:1.20.1-${mantle_version}"
 }
