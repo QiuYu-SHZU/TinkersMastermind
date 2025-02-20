@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": { "tag": "tconstruct:casts/single_use/nugget" },
+  "cast_consumed": true,
+  "fluid": {
+    "fluid": "tinkersmastermind:molten_zombie_iron",
+    "amount": 10
+  },
+  "result": "tinkersmastermind:zombie_iron_nugget",
+  "cooling_time": 5
+}

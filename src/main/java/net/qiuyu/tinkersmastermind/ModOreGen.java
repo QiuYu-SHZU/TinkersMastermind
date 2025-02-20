@@ -1,4 +1,4 @@
 package net.qiuyu.tinkersmastermind;
 
-public class TinkersMastermindOreGen {
+public class ModOreGen {
 }

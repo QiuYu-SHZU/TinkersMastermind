@@ -11,10 +11,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.qiuyu.tinkersmastermind.recipe.ModRecipes;
-import net.qiuyu.tinkersmastermind.register.TinkersMastermindItems;
+import net.qiuyu.tinkersmastermind.register.ModBlocks;
+import net.qiuyu.tinkersmastermind.register.ModFluids;
+import net.qiuyu.tinkersmastermind.register.ModItems;
 
 @Mod(TinkersMastermind.MOD_ID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -22,15 +23,17 @@ public class TinkersMastermind {
     public static final String MOD_ID = "tinkersmastermind";
 
     public TinkersMastermind() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TinkersMastermindConfig.config);
+        ModLoadingContext.get().registerConfig(net.minecraftforge.fml.config.ModConfig.Type.COMMON, ModConfig.config);
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
-        TinkersMastermindItems.ITEMS.register(bus);
+        ModItems.ITEMS.register(bus);
+        ModBlocks.BLOCKS.register(bus);
+        ModFluids.FLUIDS.register(bus);
         CreativeModeTab.builder()
                 .title(CreativeModeTab.builder().title(net.minecraft.network.chat.Component.translatable("itemGroup.tinkersmastermind.tab")).build().getDisplayName())
-                .icon(() -> new ItemStack(TinkersMastermindItems.zombie_iron.get()))
+                .icon(() -> new ItemStack(ModItems.zombie_iron.get()))
                 .displayItems((parameters, output) -> {
-                    output.accept(TinkersMastermindItems.zombie_iron.get());
+                    output.accept(ModItems.zombie_iron.get());
                 })
                 .build();
         ModRecipes.register(bus);

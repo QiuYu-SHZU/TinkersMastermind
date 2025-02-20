@@ -3,7 +3,7 @@ package net.qiuyu.tinkersmastermind;
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
-public class TinkersMastermindConfig {
+public class ModConfig {
     public static final CommonConfig COMMON;
     public static ForgeConfigSpec config;
 

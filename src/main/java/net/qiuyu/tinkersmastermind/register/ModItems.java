@@ -6,15 +6,16 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.qiuyu.tinkersmastermind.register.block.ZombieIronBlock;
 import net.qiuyu.tinkersmastermind.register.item.ZombieIron;
 
-import static net.qiuyu.tinkersmastermind.TinkersMastermind.MOD_ID;
+import static net.qiuyu.tinkersmastermind.TinkersMastermind.*;
 
-public class TinkersMastermindBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MOD_ID);
+public class ModItems {
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
+    private static final Item.Properties TOOL = new Item.Properties().stacksTo(1);
+    private static final Item.Properties PARTS_PROPS = new Item.Properties();
 
-    public static RegistryObject<Block> ZOMBIE_IRON_BLOCK = BLOCKS.register("zombie_iron_block", ZombieIronBlock::register_block);
+    public static RegistryObject<Item> zombie_iron = ITEMS.register("zombie_iron", ZombieIron::register_item);
 
 
     public static BlockItem register_block(Block block) {
@@ -24,5 +25,6 @@ public class TinkersMastermindBlocks {
     public static Item register_item() {
         return new Item(new Item.Properties());
     }
+
 
 }
