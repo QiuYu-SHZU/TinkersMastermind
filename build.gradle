@@ -135,11 +135,10 @@ obfuscation {
 }
 
 dependencies {
-    // compile against the JEI API but do not include it at runtime
-    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
-    compileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
-    // at runtime, use the full JEI jar
-    runtimeOnly "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"
+    modCompileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    modCompileOnly "mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"
+    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
+    modLocalRuntime "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"
     modImplementation "slimeknights.tconstruct:TConstruct:1.20.1-${tcon_version}"
     modImplementation "slimeknights.mantle:Mantle:1.20.1-${mantle_version}"
 }
