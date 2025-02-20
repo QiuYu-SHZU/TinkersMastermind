@@ -15,8 +15,8 @@ public class ModLangGenEN extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(TinkersMastermindItems.poison_coating_lvl1.get(), "Poison Coating I");
-
+        add(TinkersMastermindItems.zombie_iron.get(), "Zombie Iron");
+        add("itemGroup.tinkersmastermind.tab","Tinkers' Mastermind");
     }
 
 }

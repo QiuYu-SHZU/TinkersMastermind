@@ -2,6 +2,8 @@ package net.qiuyu.tinkersmastermind;
 
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -24,9 +26,14 @@ public class TinkersMastermind {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         MinecraftForge.EVENT_BUS.register(this);
         TinkersMastermindItems.ITEMS.register(bus);
+        CreativeModeTab.builder()
+                .title(CreativeModeTab.builder().title(net.minecraft.network.chat.Component.translatable("itemGroup.tinkersmastermind.tab")).build().getDisplayName())
+                .icon(() -> new ItemStack(TinkersMastermindItems.zombie_iron.get()))
+                .displayItems((parameters, output) -> {
+                    output.accept(TinkersMastermindItems.zombie_iron.get());
+                })
+                .build();
         ModRecipes.register(bus);
-
-
     }
 
     @SubscribeEvent

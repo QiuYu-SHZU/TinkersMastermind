@@ -8,7 +8,7 @@ version = "${file.jarVersion}"
 displayName = "Tinkers' Mastermind"
 logoFile = "logo.png"
 authors = "QiuYuAkiGO"
-description = '''IDK'''
+description = '''百尺竿头,更近一步.\n感谢您的游玩.'''
 
 [[dependencies.tinkersmastermind]]
 modId="forge"

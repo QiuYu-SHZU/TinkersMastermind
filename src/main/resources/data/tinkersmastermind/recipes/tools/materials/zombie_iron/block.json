@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:material",
+  "ingredient": {
+    "tag": "forge:storage_blocks/zombie_iron"
+  },
+  "value": 9,
+  "needed": 1,
+  "material": "tinkersmastermind:zombie_iron",
+  "leftover": {
+    "tag": "forge:ingots/zombie_iron"
+  }
+}
