@@ -10,7 +10,7 @@ import net.qiuyu.tinkersmastermind.register.item.ZombieIron;
 
 import static net.qiuyu.tinkersmastermind.TinkersMastermind.*;
 
-public class TinkersMastermindItems {
+public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
     private static final Item.Properties TOOL = new Item.Properties().stacksTo(1);
     private static final Item.Properties PARTS_PROPS = new Item.Properties();

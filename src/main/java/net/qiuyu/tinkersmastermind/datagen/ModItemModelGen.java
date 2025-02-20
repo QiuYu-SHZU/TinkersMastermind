@@ -8,7 +8,7 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.qiuyu.tinkersmastermind.TinkersMastermind;
-import net.qiuyu.tinkersmastermind.register.TinkersMastermindItems;
+import net.qiuyu.tinkersmastermind.register.ModItems;
 
 
 public class ModItemModelGen extends ItemModelProvider {
@@ -23,7 +23,7 @@ public class ModItemModelGen extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        itemGeneratedModel(TinkersMastermindItems.zombie_iron.get(), resourceItem((itemName(TinkersMastermindItems.zombie_iron.get()))));
+        itemGeneratedModel(ModItems.zombie_iron.get(), resourceItem((itemName(ModItems.zombie_iron.get()))));
     }
 
     public void itemGeneratedModel(Item item, ResourceLocation texture) {

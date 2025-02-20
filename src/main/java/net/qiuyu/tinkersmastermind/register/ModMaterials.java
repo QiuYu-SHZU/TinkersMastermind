@@ -1,4 +1,5 @@
 package net.qiuyu.tinkersmastermind.register;
 
-public class TinkersMastermindBlocks {
+public class ModMaterials {
+
 }

@@ -18,6 +18,8 @@ Tinkers' Mastermind(匠魂长阶)
 
 相关链接: 
 ==========
-Tinkers' Constrct: [https://docs.neoforged.net/ ](https://github.com/SlimeKnights/TinkersConstruct/) 
+Tinkers' Constrct: [https://docs.neoforged.net/ ](https://github.com/SlimeKnights/TinkersConstruct/)
 
 Tinkers' Thinking: [https://discord.neoforged.net/](https://github.com/CreepingCreeper/Tinkers-Thinking)
+
+Flandre923's tutorial mod: https://github.com/Flandre923/neoForge1.20.1-Tutorialmod-code

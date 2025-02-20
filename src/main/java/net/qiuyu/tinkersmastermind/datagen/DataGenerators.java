@@ -17,6 +17,7 @@ public class DataGenerators {
         DataGenerator generator = event.getGenerator();
         ExistingFileHelper helper = event.getExistingFileHelper();
         generator.addProvider(true,new ModItemModelGen(generator.getPackOutput(), helper));
+        generator.addProvider(true,new ModBlockModelGen(generator.getPackOutput(), helper));
         generator.addProvider(true,new ModLangGenEN(generator.getPackOutput(), "en_us"));
         generator.addProvider(true,new ModLangGenCN(generator.getPackOutput(), "zh_cn"));
     }
