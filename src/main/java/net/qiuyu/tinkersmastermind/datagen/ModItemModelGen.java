@@ -1,7 +1,7 @@
 package net.qiuyu.tinkersmastermind.datagen;
 
 
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -17,20 +17,13 @@ public class ModItemModelGen extends ItemModelProvider {
     public static final String HANDHELD = "item/handheld";
 
 
-    public ModItemModelGen(DataGenerator gen, ExistingFileHelper existingFileHelper) {
-        super(gen, TinkersMastermind.MOD_ID, existingFileHelper);
+    public ModItemModelGen(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, TinkersMastermind.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void registerModels() {
-        itemGeneratedModel(TinkersMastermindItems.sticky_potion.get(), resourceItem((itemName(TinkersMastermindItems.sticky_potion.get()))));
-        itemGeneratedModel(TinkersMastermindItems.poison_coating_lvl1.get(), resourceItem((itemName(TinkersMastermindItems.poison_coating_lvl1.get()))));
-        itemGeneratedModel(TinkersMastermindItems.poison_coating_lvl2.get(), resourceItem((itemName(TinkersMastermindItems.poison_coating_lvl2.get()))));
-        itemGeneratedModel(TinkersMastermindItems.poison_coating_lvl3.get(), resourceItem((itemName(TinkersMastermindItems.poison_coating_lvl3.get()))));
-        itemGeneratedModel(TinkersMastermindItems.flame_coating_lvl1.get(), resourceItem((itemName(TinkersMastermindItems.flame_coating_lvl1.get()))));
-        itemGeneratedModel(TinkersMastermindItems.flame_coating_lvl2.get(), resourceItem((itemName(TinkersMastermindItems.flame_coating_lvl2.get()))));
-        itemGeneratedModel(TinkersMastermindItems.flame_coating_lvl3.get(), resourceItem((itemName(TinkersMastermindItems.flame_coating_lvl3.get()))));
-
+        itemGeneratedModel(TinkersMastermindItems.zombie_iron.get(), resourceItem((itemName(TinkersMastermindItems.zombie_iron.get()))));
     }
 
     public void itemGeneratedModel(Item item, ResourceLocation texture) {

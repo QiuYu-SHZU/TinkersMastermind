@@ -1,14 +1,15 @@
 package net.qiuyu.tinkersmastermind.datagen;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.qiuyu.tinkersmastermind.TinkersMastermind;
 
 
 public class ModBlockModelGen extends BlockStateProvider {
-    public ModBlockModelGen(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, TinkersMastermind.MOD_ID, exFileHelper);
+    public ModBlockModelGen(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, TinkersMastermind.MOD_ID, exFileHelper);
     }
 
     @Override
