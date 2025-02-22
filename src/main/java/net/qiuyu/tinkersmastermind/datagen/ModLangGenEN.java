@@ -24,6 +24,10 @@ public class ModLangGenEN extends LanguageProvider {
         add("modifier.tinkersmastermind.rotten II","Rotten II");
         add("modifier.tinkersmastermind.rotten III","Rotten III");
         add("modifier.tinkersmastermind.rotten IV","Rotten IV");
+        add("modifier.tinkersmastermind.hungry I","I'm Hungry I");
+        add("modifier.tinkersmastermind.hungry II","I'm Hungry II");
+        add("modifier.tinkersmastermind.hungry III","I'm Hungry III");
+        add("modifier.tinkersmastermind.hungry IV","I'm Hungry IV");
     }
 
 }

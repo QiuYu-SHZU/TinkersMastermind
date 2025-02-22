@@ -24,5 +24,9 @@ public class ModLangGenCN extends LanguageProvider {
         add("modifier.tinkersmastermind.rotten II","霉味 II");
         add("modifier.tinkersmastermind.rotten III","霉味 III");
         add("modifier.tinkersmastermind.rotten IV","霉味 IV");
+        add("modifier.tinkersmastermind.hungry I","我饿了 I");
+        add("modifier.tinkersmastermind.hungry II","我饿了 II");
+        add("modifier.tinkersmastermind.hungry III","我饿了 III");
+        add("modifier.tinkersmastermind.hungry IV","我饿了 IV");
     }
 }

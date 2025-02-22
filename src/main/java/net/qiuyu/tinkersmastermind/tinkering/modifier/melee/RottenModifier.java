@@ -16,8 +16,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraftforge.common.util.Lazy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
@@ -34,9 +32,8 @@ import java.util.List;
 
 public class RottenModifier extends Modifier implements ProcessLootModifierHook,GeneralInteractionModifierHook {
 
-    private static final Logger log = LoggerFactory.getLogger(RottenModifier.class);
     private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "rotten");
-    private static final Lazy<ItemStack> ROTTEN_FLESH_STACK = Lazy.of(() -> new ItemStack(Items.ROTTEN_FLESH));
+    public static final Lazy<ItemStack> ROTTEN_FLESH_STACK = Lazy.of(() -> new ItemStack(Items.ROTTEN_FLESH));
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
@@ -65,7 +62,6 @@ public class RottenModifier extends Modifier implements ProcessLootModifierHook,
     public InteractionResult onToolUse(IToolStackView tool, ModifierEntry modifier, Player player, InteractionHand hand, InteractionSource source) {
         if (source == InteractionSource.RIGHT_CLICK && !tool.isBroken() && player.canEat(false)) {
             GeneralInteractionModifierHook.startUsing(tool, modifier.getId(), player, hand);
-            log.info("RottenModifier StartToolUse");
             eat(tool, modifier, player);
             return InteractionResult.CONSUME;
         }
@@ -76,8 +72,6 @@ public class RottenModifier extends Modifier implements ProcessLootModifierHook,
         int level = modifier.intEffectiveLevel();
         if (level > 0 && entity instanceof Player player && player.canEat(false)) {
             Level world = entity.level();
-            log.info("RottenModifier Eating");
-
             player.getFoodData().eat(level, 0.4F);
             ModifierUtil.foodConsumer.onConsume(player, ROTTEN_FLESH_STACK.get(), level, 0.8F);
             player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 40, 0));
@@ -89,7 +83,6 @@ public class RottenModifier extends Modifier implements ProcessLootModifierHook,
             if (ToolDamageUtil.directDamage(tool, 15 * level, player, player.getUseItem())) {
                 player.broadcastBreakEvent(player.getUsedItemHand());
             }
-            log.info("RottenModifier Eaten");
         }
     }
 }

@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:material_fluid",
+  "input": "minecraft:rotten_flesh",
+  "fluid": {
+    "tag": "tinkersmastermind:zombie_iron",
+    "amount": 90
+  },
+  "temperature": 1000,
+  "output": "tconstruct:repair_kit"
+}

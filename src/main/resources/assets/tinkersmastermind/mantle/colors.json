@@ -1,0 +1,11 @@
+{
+  "modifier.tinkersmastermind":
+  {
+    "rotten": "#3e663c",
+    "hungry": "#3e663c"
+  },
+  "material.tinkersmastermind":
+  {
+    "zombie_iron": "#3e663c"
+  }
+}
