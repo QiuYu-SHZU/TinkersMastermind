@@ -5,7 +5,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.qiuyu.tinkersmastermind.TinkersMastermind;
 import net.qiuyu.tinkersmastermind.register.ModBlocks;
-import net.qiuyu.tinkersmastermind.register.ModFluids;
 import net.qiuyu.tinkersmastermind.register.ModItems;
 
 
@@ -16,11 +15,15 @@ public class ModLangGenEN extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(ModItems.zombie_iron.get(), "Zombie Iron");
+        add(ModItems.ZOMBIE_IRON.get(), "Zombie Iron");
         add(ModBlocks.ZOMBIE_IRON_BLOCK.get(), "Zombie Iron Block");
         add("fluid_type.tinkersmastermind.molten_zombie_iron", "Molten Zombie Iron");
         add("item.tinkersmastermind.molten_zombie_iron_bucket", "Molten Zombie Iron Bucket");
         add("itemGroup.tinkersmastermind.tab","Tinkers' Mastermind");
+        add("modifier.tinkersmastermind.rotten I","Rotten I");
+        add("modifier.tinkersmastermind.rotten II","Rotten II");
+        add("modifier.tinkersmastermind.rotten III","Rotten III");
+        add("modifier.tinkersmastermind.rotten IV","Rotten IV");
     }
 
 }

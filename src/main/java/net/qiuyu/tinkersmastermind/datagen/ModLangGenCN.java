@@ -15,10 +15,14 @@ public class ModLangGenCN extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(ModItems.zombie_iron.get(), "僵尸铁");
+        add(ModItems.ZOMBIE_IRON.get(), "僵尸铁");
         add(ModBlocks.ZOMBIE_IRON_BLOCK.get(), "僵尸铁块");
         add("itemGroup.tinkersmastermind.tab","匠魂长阶");
         add("item.tinkersmastermind.molten_zombie_iron_bucket", "熔融僵尸铁桶");
         add("fluid_type.tinkersmastermind.molten_zombie_iron", "熔融僵尸铁");
+        add("modifier.tinkersmastermind.rotten I","霉味 I");
+        add("modifier.tinkersmastermind.rotten II","霉味 II");
+        add("modifier.tinkersmastermind.rotten III","霉味 III");
+        add("modifier.tinkersmastermind.rotten IV","霉味 IV");
     }
 }

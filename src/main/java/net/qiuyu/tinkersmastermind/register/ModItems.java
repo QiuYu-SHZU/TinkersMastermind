@@ -15,7 +15,7 @@ public class ModItems {
     private static final Item.Properties TOOL = new Item.Properties().stacksTo(1);
     private static final Item.Properties PARTS_PROPS = new Item.Properties();
 
-    public static RegistryObject<Item> zombie_iron = ITEMS.register("zombie_iron", ZombieIron::register_item);
+    public static RegistryObject<Item> ZOMBIE_IRON = ITEMS.register("zombie_iron", ZombieIron::register_item);
 
 
     public static BlockItem register_block(Block block) {
