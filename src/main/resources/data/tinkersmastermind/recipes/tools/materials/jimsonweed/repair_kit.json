@@ -1,11 +1,11 @@
 {
   "type": "tconstruct:material_fluid",
-  "input": "minecraft:rotten_flesh",
+  "input": "minecraft:floppy",
   "fluid": {
-    "tag": "tinkersmastermind:molten_zombie_iron",
+    "tag": "tinkersmastermind:molten_jimsonweed",
     "amount": 90
   },
-  "temperature": 1000,
+  "temperature": 1500,
   "output": {
     "tag": "tconstruct:repair_kit"
   }

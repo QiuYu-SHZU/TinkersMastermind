@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "tag": "tinkersmastermind:molten_zombie_iron",   "amount":   90 },
+    { "tag": "tconstruct:molten_rose_gold", "amount":  180 }
+  ],
+  "result": {
+    "fluid": "tinkersmastermind:molten_jimsonweed",
+    "amount": 90
+  },
+  "temperature": 1500
+}

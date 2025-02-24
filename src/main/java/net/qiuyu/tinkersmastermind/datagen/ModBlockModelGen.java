@@ -19,6 +19,7 @@ public class ModBlockModelGen extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         this.registerBlockModelAndItem(ModBlocks.ZOMBIE_IRON_BLOCK.get());
+        this.registerBlockModelAndItem(ModBlocks.JIMSONWEED_BLOCK.get());
 //        simpleBlockItem(TinkersMastermindBlocks.STRIPPED_EBONY_WOOD.get(), models().withExistingParent("tutorialmod:stripped_ebony_wood", "minecraft:block/cube_column"));
     }
 

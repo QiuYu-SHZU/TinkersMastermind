@@ -3,9 +3,9 @@
   "cast": { "tag": "tconstruct:casts/single_use/ingot" },
   "cast_consumed": true,
   "fluid": {
-    "fluid": "tinkersmastermind:molten_zombie_iron",
+    "fluid": "tinkersmastermind:molten_jimsonweed",
     "amount": 90
   },
-  "result": "tinkersmastermind:zombie_iron",
+  "result": "tinkersmastermind:jimsonweed",
   "cooling_time": 55
 }
