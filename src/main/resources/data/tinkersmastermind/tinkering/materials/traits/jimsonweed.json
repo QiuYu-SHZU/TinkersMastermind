@@ -2,20 +2,20 @@
   "perStat": {
     "tconstruct:melee_harvest": [
       {
-        "name": "tinkersmastermind:rotten",
+        "name": "tinkersmastermind:heavy_poison",
         "level": 1
       }
     ],
     "tconstruct:armor": [
       {
-        "name": "tinkersmastermind:hungry",
+        "name": "tinkersmastermind:poison_sparkle",
         "level": 1
       }
     ],
     "tconstruct:plating_shield": [
       {
         "level": 1,
-        "name": "tinkersmastermind:hungry"
+        "name": "tinkersmastermind:poison_sparkle"
       }
     ]
   }

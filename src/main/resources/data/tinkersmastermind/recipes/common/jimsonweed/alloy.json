@@ -1,7 +1,7 @@
 {
   "type": "tconstruct:alloy",
   "inputs": [
-    { "tag": "tinkersmastermind:molten_zombie_iron",   "amount":   90 },
+    { "fluid": "tinkersmastermind:molten_zombie_iron",   "amount":   90 },
     { "tag": "tconstruct:molten_rose_gold", "amount":  180 }
   ],
   "result": {

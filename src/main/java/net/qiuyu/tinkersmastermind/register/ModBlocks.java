@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.qiuyu.tinkersmastermind.register.block.JimsonweedBlock;
 import net.qiuyu.tinkersmastermind.register.block.ZombieIronBlock;
 
 import java.util.function.Supplier;
@@ -18,7 +19,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> ZOMBIE_IRON_BLOCK = registerBlock("zombie_iron_block",
             () -> new Block(ZombieIronBlock.properties()));
     public static final RegistryObject<Block> JIMSONWEED_BLOCK = registerBlock("jimsonweed_block",
-            () -> new Block(ZombieIronBlock.properties()));
+            () -> new Block(JimsonweedBlock.properties()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

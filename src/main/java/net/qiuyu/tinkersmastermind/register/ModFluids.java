@@ -1,7 +1,6 @@
 package net.qiuyu.tinkersmastermind.register;
 
 import net.minecraft.sounds.SoundEvents;
-
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraftforge.common.SoundActions;
@@ -17,7 +16,7 @@ public class ModFluids {
     public static final FluidDeferredRegister FLUIDS = new FluidDeferredRegister(TinkersMastermind.MOD_ID);
 
     public static final FlowingFluidObject<ForgeFlowingFluid> MOLTEN_ZOMBIE_IRON = FLUIDS.register("molten_zombie_iron").type(hot().temperature(1000).lightLevel(15)).block(createBurning(MapColor.COLOR_GREEN, 10, 5,4f)).bucket().flowing();
-    public static final FlowingFluidObject<ForgeFlowingFluid> MOLTEN_JIMSONWEED_IRON = FLUIDS.register("molten_jimsonweed_iron").type(hot()).block(createBurning(MapColor.COLOR_GREEN, 10, 5,4f)).bucket().flowing();
+    public static final FlowingFluidObject<ForgeFlowingFluid> MOLTEN_JIMSONWEED = FLUIDS.register("molten_jimsonweed").type(hot()).block(createBurning(MapColor.COLOR_GREEN, 10, 5,4f)).bucket().flowing();
 
     private static FluidType.Properties common() {
        return FluidType.Properties.create().density(2000).viscosity(10000).temperature(1000).sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)

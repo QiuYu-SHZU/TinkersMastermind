@@ -36,7 +36,7 @@ public class BlusterModifier extends Modifier implements ProjectileHitModifierHo
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.PROJECTILE_HIT);
+//        hookBuilder.addHook(this, ModifierHooks.PROJECTILE_HIT);
     }
     @Override
     public boolean onProjectileHitBlock(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, BlockHitResult hit, @Nullable LivingEntity attacker) {
