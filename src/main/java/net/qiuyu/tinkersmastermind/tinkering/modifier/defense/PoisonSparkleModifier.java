@@ -32,7 +32,7 @@ public class PoisonSparkleModifier extends Modifier implements OnAttackedModifie
         int level = modifierEntry.getLevel();
         if (attacker instanceof LivingEntity && attacker.isAlive()) {
             // 有10％/20％/30％/40％的概率使敌人获得中毒II效果
-            attacker.hurt(damageSource, 0.5F * (level + 1));
+//            attacker.hurt(damageSource, 0.5F * (level + 1));
             Random random = new Random();
             if (random.nextFloat() < 0.1 * level) {
                 ((LivingEntity) attacker).addEffect(new MobEffectInstance(MobEffects.POISON, 20 * (1 + modifierEntry.getLevel()), 1));
