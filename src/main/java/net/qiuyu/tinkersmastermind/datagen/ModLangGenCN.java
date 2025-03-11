@@ -26,6 +26,7 @@ public class ModLangGenCN extends LanguageProvider {
         add("item.tinkersmastermind.molten_jimsonweed_bucket", "熔融曼陀罗合金桶");
         add("modifier.tinkersmastermind.rotten","霉味");
         add("modifier.tinkersmastermind.hungry","我饿了");
+        add("modifier.tinkersmastermind.hungry.description","114514");
         add("modifier.tinkersmastermind.bluster","爆燃");
         add("modifier.tinkersmastermind.poison_sparkle","毒性荆棘");
         add("modifier.tinkersmastermind.heavy_poison","猛毒");

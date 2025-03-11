@@ -22,13 +22,13 @@
             "color_mapping": {
                 "type": "tconstruct:grey_to_color",
                 "palette": [
-                    {"color": "FF3E663C",   "grey": 0},
-                    {"color": "FF3E663C",   "grey": 63},
-                    {"color": "FF3E663C",   "grey": 102},
-                    {"color": "FF3E663C",   "grey": 140},
-                    {"color": "FF3E663C",   "grey": 178},
-                    {"color": "FF3E663C",   "grey": 216},
-                    {"color": "FF3E663C",   "grey": 255}
+                    {"color": "FF25432D",   "grey": 0},
+                    {"color": "FF1A5F2C",   "grey": 63},
+                    {"color": "FF29763E",   "grey": 102},
+                    {"color": "FF29763E",   "grey": 140},
+                    {"color": "FF4C8669",   "grey": 178},
+                    {"color": "FF4EA566",   "grey": 216},
+                    {"color": "FF76CC8E",   "grey": 255}
                 ]
             }
         }
