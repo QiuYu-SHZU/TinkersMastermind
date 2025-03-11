@@ -68,11 +68,18 @@ public class RottenModifier extends Modifier implements ProcessLootModifierHook,
         return InteractionResult.PASS;
     }
 
+    @Override
+    public void onFinishUsing(IToolStackView tool, ModifierEntry modifier, LivingEntity entity) {
+        if (!tool.isBroken()) {
+            eat(tool, modifier, entity);
+        }
+    }
+
     private void eat(IToolStackView tool, ModifierEntry modifier, LivingEntity entity) {
         int level = modifier.intEffectiveLevel();
         if (level > 0 && entity instanceof Player player && player.canEat(false)) {
             Level world = entity.level();
-            player.getFoodData().eat(level, 0.4F);
+            player.getFoodData().eat(level, 0.2F);
             ModifierUtil.foodConsumer.onConsume(player, ROTTEN_FLESH_STACK.get(), level, 0.8F);
             player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 40, 0));
 
@@ -80,7 +87,7 @@ public class RottenModifier extends Modifier implements ProcessLootModifierHook,
             world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.PLAYER_BURP, SoundSource.NEUTRAL, 0.5F, world.random.nextFloat() * 0.1F + 0.9F);
 
             // 15 damage for a bite per level, does not process reinforced/overslime, your teeth are tough
-            if (ToolDamageUtil.directDamage(tool, 15 * level, player, player.getUseItem())) {
+            if (ToolDamageUtil.directDamage(tool, 20 * level, player, player.getUseItem())) {
                 player.broadcastBreakEvent(player.getUsedItemHand());
             }
         }
