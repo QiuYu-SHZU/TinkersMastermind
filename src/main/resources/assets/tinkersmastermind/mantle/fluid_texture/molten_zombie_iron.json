@@ -1,5 +1,5 @@
 {
-  "color": "FF3e663c",
-  "flowing": "tinkersmastermind:fluid/molten/zombie_iron/flowing",
-  "still": "tinkersmastermind:fluid/molten/zombie_iron/still"
+"color": "FF3E663C",
+"flowing": "tconstruct:fluid/molten/compat_ore/aluminum/flowing",
+"still": "tconstruct:fluid/molten/compat_ore/aluminum/still"
 }
