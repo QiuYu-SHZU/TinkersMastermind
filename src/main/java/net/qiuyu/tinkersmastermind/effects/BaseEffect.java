@@ -29,7 +29,7 @@ public class BaseEffect extends MobEffect{
     protected boolean canApplyEffect(int remainingTicks, int level) {
         if (!isInstantenous()) {
             //Log.w("Non-instant effects should override canApplyEffect!");
-            Thread.dumpStack();
+
         }
         return false;
     }

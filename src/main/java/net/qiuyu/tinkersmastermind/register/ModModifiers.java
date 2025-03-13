@@ -3,6 +3,7 @@ package net.qiuyu.tinkersmastermind.register;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.qiuyu.tinkersmastermind.TinkersMastermind;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.HungryModifier;
+import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.PoisonErosionModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.defense.PoisonSparkleModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.HeavyPoisonModifier;
 import net.qiuyu.tinkersmastermind.tinkering.modifier.melee.RottenModifier;
@@ -19,6 +20,7 @@ public class ModModifiers {
     public static final StaticModifier<HungryModifier> Hungry = MODIFIERS.register("hungry", HungryModifier::new);
     public static final StaticModifier<BlusterModifier> Bluster = MODIFIERS.register("bluster", BlusterModifier::new);
     public static final StaticModifier<PoisonSparkleModifier> PoisonSparkle = MODIFIERS.register("poison_sparkle", PoisonSparkleModifier::new);
+    public static final StaticModifier<PoisonErosionModifier> PoisonErosion = MODIFIERS.register("poison_erosion", PoisonErosionModifier::new);
     public static final StaticModifier<HeavyPoisonModifier> HeavyPoison = MODIFIERS.register("heavy_poison", HeavyPoisonModifier::new);
 
 }
