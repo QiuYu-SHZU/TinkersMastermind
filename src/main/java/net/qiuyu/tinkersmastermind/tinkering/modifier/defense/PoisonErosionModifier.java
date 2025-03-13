@@ -23,9 +23,7 @@ public class PoisonErosionModifier extends Modifier implements EquipmentChangeMo
     @Override
     public void onEquip(IToolStackView tool, ModifierEntry modifier, EquipmentChangeContext context) {
         LivingEntity entity = context.getEntity();
-        if (context.getChangedSlot() == EquipmentSlot.MAINHAND || context.getChangedSlot() == EquipmentSlot.OFFHAND){
-            entity.addEffect(new MobEffectInstance(MobEffects.POISON,200,0));
-        }
+        entity.addEffect(new MobEffectInstance(MobEffects.POISON,200,0));
     }
 
     @Override
