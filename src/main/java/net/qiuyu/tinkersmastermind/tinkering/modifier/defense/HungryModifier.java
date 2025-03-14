@@ -64,7 +64,7 @@ public class HungryModifier extends Modifier implements ModifyDamageModifierHook
         Entity entity = context.getEntity();
         if (entity instanceof LivingEntity &&((LivingEntity) entity).getEffect(MobEffects.HUNGER) == null) {
             int level = modifier.getLevel();
-            ((LivingEntity) entity).addEffect(new MobEffectInstance(MobEffects.HUNGER, 2147483647, level-1, true, true));
+            ((LivingEntity) entity).addEffect(new MobEffectInstance(MobEffects.HUNGER, -1, level-1, true, true));
         }
     }
 

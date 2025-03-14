@@ -28,8 +28,9 @@ public class HeavyPoisonModifier extends Modifier implements MeleeHitModifierHoo
         // 根据工具等级赋予对方1/2级的中毒效果
         int level = modifier.getLevel();
         LivingEntity target = context.getLivingTarget();
-        if (target != null && !target.isDeadOrDying() && context.isFullyCharged())
+        if (target != null && !target.isDeadOrDying() && context.isFullyCharged()){
             context.getLivingTarget().addEffect(new MobEffectInstance(MobEffects.POISON, 100, level - 1));
+        }
     }
 
     @Override
@@ -38,7 +39,7 @@ public class HeavyPoisonModifier extends Modifier implements MeleeHitModifierHoo
         float amplifier = 1F;
         LivingEntity attacker = context.getAttacker();
         if (attacker.hasEffect(MobEffects.POISON)){
-           amplifier += (float)attacker.getEffect(MobEffects.POISON).getDuration() % 1200 / 1200;
+           amplifier += Math.min((float)attacker.getEffect(MobEffects.POISON).getDuration() * 0.2F / 1200 ,0.2F);
         }
         return v * amplifier;
     }
