@@ -2,13 +2,11 @@ package net.qiuyu.tinkersmastermind.tinkering.modifier.defense;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
-import net.qiuyu.tinkersmastermind.effects.PosionResistEffect;
 import net.qiuyu.tinkersmastermind.register.ModEffects;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
@@ -53,7 +51,7 @@ public class PoisonSparkleModifier extends Modifier implements OnAttackedModifie
             return;
         }
         if (!entity.hasEffect(ModEffects.POISON_RESIST.get())) {
-            entity.addEffect(new MobEffectInstance(ModEffects.POISON_RESIST.get(), 2147483647, 0, true, true));
+            entity.addEffect(new MobEffectInstance(ModEffects.POISON_RESIST.get(), -1, 0, true, true));
         }
     }
 
