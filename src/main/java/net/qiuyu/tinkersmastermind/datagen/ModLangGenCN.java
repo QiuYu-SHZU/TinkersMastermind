@@ -20,7 +20,12 @@ public class ModLangGenCN extends LanguageProvider {
         add(ModBlocks.ZOMBIE_IRON_BLOCK.get(), "僵尸铁块");
         add(ModBlocks.JIMSONWEED_BLOCK.get(), "曼陀罗合金块");
         add(ModItems.JIMSONWEED.get(), "曼陀罗合金");
+        add(ModItems.VOMIT.get(), "呕吐物");
+        add(ModItems.INSOLE.get(), "鞋垫");
         add(ModEffects.POISON_RESIST.get(),"猛毒耐性");
+        add(ModEffects.FOOT_CLEAN.get(),"干净的脚");
+        add(ModEffects.FOOT_ODOR.get(),"脚臭");
+        add("modifier.tinkersmastermind.insole.description","记得洗脚.");
         add("itemGroup.tinkersmastermind.tab","匠魂长阶");
         add("item.tinkersmastermind.molten_zombie_iron_bucket", "熔融僵尸铁桶");
         add("fluid_type.tinkersmastermind.molten_zombie_iron", "熔融僵尸铁");

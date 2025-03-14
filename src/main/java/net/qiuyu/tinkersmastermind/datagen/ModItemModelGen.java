@@ -25,6 +25,8 @@ public class ModItemModelGen extends ItemModelProvider {
     protected void registerModels() {
         itemGeneratedModel(ModItems.ZOMBIE_IRON.get(), resourceItem((itemName(ModItems.ZOMBIE_IRON.get()))));
         itemGeneratedModel(ModItems.JIMSONWEED.get(), resourceItem((itemName(ModItems.JIMSONWEED.get()))));
+        itemGeneratedModel(ModItems.VOMIT.get(), resourceItem((itemName(ModItems.VOMIT.get()))));
+        itemGeneratedModel(ModItems.INSOLE.get(), resourceItem((itemName(ModItems.INSOLE.get()))));
     }
 
     public void itemGeneratedModel(Item item, ResourceLocation texture) {

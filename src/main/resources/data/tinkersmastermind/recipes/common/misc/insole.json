@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "E E",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "id": "tinkersmastermind:insole"
+  },
+  "show_notification": true
+}

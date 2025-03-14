@@ -7,6 +7,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.qiuyu.tinkersmastermind.register.item.Jimsonweed;
+import net.qiuyu.tinkersmastermind.register.item.misc.Insole;
+import net.qiuyu.tinkersmastermind.register.item.misc.Vomit;
 import net.qiuyu.tinkersmastermind.register.item.ZombieIron;
 
 import static net.qiuyu.tinkersmastermind.TinkersMastermind.*;
@@ -16,6 +18,8 @@ public class ModItems {
 
     public static RegistryObject<Item> ZOMBIE_IRON = ITEMS.register("zombie_iron", ZombieIron::register_item);
     public static RegistryObject<Item> JIMSONWEED = ITEMS.register("jimsonweed", Jimsonweed::register_item);
+    public static RegistryObject<Item> VOMIT = ITEMS.register("vomit", Vomit::register_item);
+    public static RegistryObject<Item> INSOLE = ITEMS.register("insole", Insole::register_item);
 
 
     public static BlockItem register_block(Block block) {
