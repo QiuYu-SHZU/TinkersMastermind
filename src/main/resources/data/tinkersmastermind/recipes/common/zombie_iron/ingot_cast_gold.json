@@ -6,6 +6,6 @@
     "fluid": "tinkersmastermind:molten_zombie_iron",
     "amount": 90
   },
-  "result": "tinkersmastermind:zombie_iron_ingot",
+  "result": "tinkersmastermind:zombie_iron",
   "cooling_time": 55
 }

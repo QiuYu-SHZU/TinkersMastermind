@@ -13,9 +13,7 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.qiuyu.tinkersmastermind.recipe.ModRecipes;
-import net.qiuyu.tinkersmastermind.register.ModBlocks;
-import net.qiuyu.tinkersmastermind.register.ModFluids;
-import net.qiuyu.tinkersmastermind.register.ModItems;
+import net.qiuyu.tinkersmastermind.register.*;
 
 @Mod(TinkersMastermind.MOD_ID)
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -29,11 +27,13 @@ public class TinkersMastermind {
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);
         ModFluids.FLUIDS.register(bus);
+        ModModifiers.MODIFIERS.register(bus);
+        ModEffects.EFFECTS.register(bus);
         CreativeModeTab.builder()
                 .title(CreativeModeTab.builder().title(net.minecraft.network.chat.Component.translatable("itemGroup.tinkersmastermind.tab")).build().getDisplayName())
-                .icon(() -> new ItemStack(ModItems.zombie_iron.get()))
+                .icon(() -> new ItemStack(ModItems.ZOMBIE_IRON.get()))
                 .displayItems((parameters, output) -> {
-                    output.accept(ModItems.zombie_iron.get());
+                    output.accept(ModItems.ZOMBIE_IRON.get());
                 })
                 .build();
         ModRecipes.register(bus);

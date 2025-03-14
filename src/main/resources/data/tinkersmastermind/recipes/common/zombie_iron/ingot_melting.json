@@ -1,6 +1,6 @@
 {
   "type": "tconstruct:melting",
-  "ingredient": { "tag": "forge:ingots/zombie_iron" },
+  "ingredient": { "item": "tinkersmastermind:zombie_iron" },
   "result": {
     "fluid": "tinkersmastermind:molten_zombie_iron",
     "amount": 90

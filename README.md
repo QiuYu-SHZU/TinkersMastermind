@@ -23,3 +23,7 @@ Tinkers' Constrct: [https://docs.neoforged.net/ ](https://github.com/SlimeKnight
 Tinkers' Thinking: [https://discord.neoforged.net/](https://github.com/CreepingCreeper/Tinkers-Thinking)
 
 Flandre923's tutorial mod: https://github.com/Flandre923/neoForge1.20.1-Tutorialmod-code
+
+Tinkers-Construct-Development-Manual: https://github.com/LitterWolf-fufu/Tinkers-Construct-Development-Manual
+
+
