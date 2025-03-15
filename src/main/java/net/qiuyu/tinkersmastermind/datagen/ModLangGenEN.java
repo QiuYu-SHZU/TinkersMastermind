@@ -34,6 +34,8 @@ public class ModLangGenEN extends LanguageProvider {
         add("modifier.tinkersmastermind.rotten","Rotten");
         add("modifier.tinkersmastermind.hungry","I'm Hungry");
         add("modifier.tinkersmastermind.bluster","Bluster");
+        add("modifier.tinkersmastermind.feeding","feeding");
+        add("modifier.tinkersmastermind.foot_odor","Feet Odor");
         add("modifier.tinkersmastermind.poison_sparkle","Poison Sparkle");
         add("modifier.tinkersmastermind.poison_erosion","Poison Erosion");
         add("modifier.tinkersmastermind.heavy_poison","Heavy Poison");

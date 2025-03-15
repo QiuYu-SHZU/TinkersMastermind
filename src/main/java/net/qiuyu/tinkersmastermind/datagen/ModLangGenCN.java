@@ -35,6 +35,8 @@ public class ModLangGenCN extends LanguageProvider {
         add("modifier.tinkersmastermind.hungry","我饿了");
         add("modifier.tinkersmastermind.hungry.description","114514");
         add("modifier.tinkersmastermind.bluster","爆燃");
+        add("modifier.tinkersmastermind.feeding","投喂");
+        add("modifier.tinkersmastermind.foot_odor","脚臭");
         add("modifier.tinkersmastermind.poison_sparkle","毒性荆棘");
         add("modifier.tinkersmastermind.poison_erosion","毒性腐蚀");
         add("modifier.tinkersmastermind.heavy_poison","猛毒");
