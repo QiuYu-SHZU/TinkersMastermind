@@ -1,31 +1,41 @@
 package net.qiuyu.tinkersmastermind.tinkering.modifier.defense;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.damagesource.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.qiuyu.tinkersmastermind.register.ModEffects;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import slimeknights.mantle.data.predicate.damage.DamageSourcePredicate;
+import slimeknights.tconstruct.common.TinkerTags;
+import slimeknights.tconstruct.common.data.DamageTypeProvider;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.armor.EquipmentChangeModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.armor.ModifyDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.armor.OnAttackedModifierHook;
+import slimeknights.tconstruct.library.modifiers.hook.armor.ProtectionModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentChangeContext;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
+import java.lang.reflect.Field;
 import java.util.Random;
 
-public class PoisonSparkleModifier extends Modifier implements OnAttackedModifierHook, EquipmentChangeModifierHook {
+public class PoisonSparkleModifier extends Modifier implements OnAttackedModifierHook, EquipmentChangeModifierHook, ModifyDamageModifierHook {
+    private static final Logger log = LoggerFactory.getLogger(PoisonSparkleModifier.class);
     private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "poison_sparkle");
 
     @Override
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
-        hookBuilder.addHook(this, ModifierHooks.ON_ATTACKED, ModifierHooks.EQUIPMENT_CHANGE);
+        hookBuilder.addHook(this, ModifierHooks.ON_ATTACKED, ModifierHooks.EQUIPMENT_CHANGE,ModifierHooks.MODIFY_DAMAGE);
     }
 
     @Override
@@ -64,5 +74,13 @@ public class PoisonSparkleModifier extends Modifier implements OnAttackedModifie
         if (entity.hasEffect(ModEffects.POISON_RESIST.get())) {
             entity.removeEffect(ModEffects.POISON_RESIST.get());
         }
+    }
+
+    @Override
+    public float modifyDamageTaken(IToolStackView iToolStackView, ModifierEntry modifierEntry, EquipmentContext equipmentContext, EquipmentSlot equipmentSlot, DamageSource damageSource, float v, boolean b) {
+        if (damageSource.type() == equipmentContext.getEntity().getCommandSenderWorld().damageSources().magic().type()) {
+            return v * 0.5F;
+        }
+        return v;
     }
 }

@@ -26,4 +26,6 @@ Flandre923's tutorial mod: https://github.com/Flandre923/neoForge1.20.1-Tutorial
 
 Tinkers-Construct-Development-Manual: https://github.com/LitterWolf-fufu/Tinkers-Construct-Development-Manual
 
+Tinkers Calibration: https://github.com/Jamesdsj/TinkersCalibration
+
 
