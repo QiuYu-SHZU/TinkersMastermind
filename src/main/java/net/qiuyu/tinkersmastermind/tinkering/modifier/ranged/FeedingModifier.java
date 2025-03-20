@@ -66,7 +66,7 @@ public class FeedingModifier extends Modifier implements ProjectileHitModifierHo
     private void applyEffect(LivingEntity attacker, LivingEntity target) {
         target.addEffect(new MobEffectInstance(MobEffects.HUNGER, 200, 9));
         target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 3));
-        target.addEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 100, 3));
+        target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 3));
         if (attacker != null) {
             // TODO 找到生成掉落物的正确方法
 //            Collection<ItemEntity> drops = new HashSet<ItemEntity>() {

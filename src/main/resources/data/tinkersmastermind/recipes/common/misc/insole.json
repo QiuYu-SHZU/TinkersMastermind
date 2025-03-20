@@ -2,7 +2,6 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "E E",
     "EEE"
   ],
   "key": {

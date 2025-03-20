@@ -58,9 +58,9 @@ public class BlusterModifier extends Modifier implements ProjectileHitModifierHo
         // 接触到方块时产生范围为3格,不破坏方块的爆炸
         // 如果命中目标为存活玩家,则施加5秒2级的混乱效果
         Level level = projectile.level();
-        projectile.level().explode(
+        level.explode(
                 projectile.getVehicle(),
-                projectile.level().damageSources().explosion(projectile.getOwner(), target),
+                projectile.level().damageSources().explosion(projectile.getOwner(), null),
                 new ExplosionDamageCalculator(),
                 projectile.getX(), projectile.getY(), projectile.getZ(),
                 3,
@@ -69,8 +69,9 @@ public class BlusterModifier extends Modifier implements ProjectileHitModifierHo
                 true
         );
         applyExplosionParticles(level, hit.getLocation());
-        projectile.level().playSound(null, projectile.getOnPos(), SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 0.3f * modifier.getLevel(), 1.0f);
-        if (target instanceof Player && !target.isDeadOrDying()) {
+        // 播放声音
+        level.playSound(null, projectile.getOnPos(), SoundEvents.GENERIC_EXPLODE, SoundSource.HOSTILE, 0.3f * modifier.getLevel(), 1.0f);
+        if (target instanceof Player) {
             target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 1));
         }
         return true;
