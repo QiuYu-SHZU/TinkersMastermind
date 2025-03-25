@@ -10,6 +10,8 @@ import net.qiuyu.tinkersmastermind.register.item.Jimsonweed;
 import net.qiuyu.tinkersmastermind.register.item.misc.Insole;
 import net.qiuyu.tinkersmastermind.register.item.misc.Vomit;
 import net.qiuyu.tinkersmastermind.register.item.ZombieIron;
+import net.qiuyu.tinkersmastermind.register.item.Coral;
+import net.qiuyu.tinkersmastermind.register.item.CoralCopper;
 
 import static net.qiuyu.tinkersmastermind.TinkersMastermind.*;
 
@@ -20,7 +22,8 @@ public class ModItems {
     public static RegistryObject<Item> JIMSONWEED = ITEMS.register("jimsonweed", Jimsonweed::register_item);
     public static RegistryObject<Item> VOMIT = ITEMS.register("vomit", Vomit::register_item);
     public static RegistryObject<Item> INSOLE = ITEMS.register("insole", Insole::register_item);
-
+    public static RegistryObject<Item> CORAL = ITEMS.register("coral", Coral::register_item);
+    public static RegistryObject<Item> CORAL_COPPER = ITEMS.register("coral_copper", CoralCopper::register_item);
 
     public static BlockItem register_block(Block block) {
         return new BlockItem(block, new Item.Properties());

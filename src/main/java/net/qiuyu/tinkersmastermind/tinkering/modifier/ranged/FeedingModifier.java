@@ -24,8 +24,8 @@ import slimeknights.tconstruct.library.modifiers.hook.ranged.ProjectileLaunchMod
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.library.tools.nbt.ModDataNBT;
 import slimeknights.tconstruct.library.tools.nbt.ModifierNBT;
-import slimeknights.tconstruct.library.tools.nbt.NamespacedNBT;
 
 import javax.annotation.Nullable;
 import java.util.Collection;
@@ -33,17 +33,13 @@ import java.util.HashSet;
 
 public class FeedingModifier extends Modifier implements ProjectileHitModifierHook, ProjectileLaunchModifierHook {
     private final ResourceLocation KEY = new ResourceLocation("tinkersmastermind", "feeding");
-    @Override
-    public void onProjectileLaunch(IToolStackView iToolStackView, ModifierEntry modifierEntry, LivingEntity livingEntity, Projectile projectile, @Nullable AbstractArrow abstractArrow, NamespacedNBT namespacedNBT, boolean b) {
-        projectile.playSound(SoundEvents.DISPENSER_LAUNCH);
-    }
 
     protected void registerHooks(ModuleHookMap.Builder hookBuilder) {
         hookBuilder.addHook(this, ModifierHooks.PROJECTILE_HIT, ModifierHooks.PROJECTILE_LAUNCH);
     }
 
     @Override
-    public boolean onProjectileHitEntity(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
+    public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @Nullable LivingEntity attacker, @Nullable LivingEntity target) {
         if (target == null){
             return false;
         }
@@ -78,8 +74,12 @@ public class FeedingModifier extends Modifier implements ProjectileHitModifierHo
     }
 
     @Override
-    public boolean onProjectileHitBlock(ModifierNBT modifiers, NamespacedNBT persistentData, ModifierEntry modifier, Projectile projectile, BlockHitResult hit, @Nullable LivingEntity attacker) {
+    public void onProjectileHitBlock(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, BlockHitResult hit, @Nullable LivingEntity attacker) {
         projectile.playSound(SoundEvents.SNOW_BREAK);
-        return false;
+    }
+
+    @Override
+    public void onProjectileLaunch(IToolStackView iToolStackView, ModifierEntry modifierEntry, LivingEntity livingEntity, Projectile projectile, @Nullable AbstractArrow abstractArrow, ModDataNBT modDataNBT, boolean b) {
+        projectile.playSound(SoundEvents.DISPENSER_LAUNCH);
     }
 }
