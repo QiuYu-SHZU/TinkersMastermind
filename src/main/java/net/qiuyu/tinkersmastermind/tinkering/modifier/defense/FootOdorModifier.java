@@ -1,6 +1,5 @@
 package net.qiuyu.tinkersmastermind.tinkering.modifier.defense;
 
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;

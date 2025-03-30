@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:alloy",
+  "inputs": [
+    { "item": "tinkersmastermind:molten_coral",   "amount":   1 }
+  ],
+  "result": {
+    "fluid": "tinkersmastermind:venom",
+    "amount": 1
+  },
+  "temperature": 1500
+}

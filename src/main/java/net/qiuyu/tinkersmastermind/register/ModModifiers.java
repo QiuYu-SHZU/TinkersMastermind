@@ -22,7 +22,7 @@ public class ModModifiers {
     public static final StaticModifier<HungryModifier> Hungry = MODIFIERS.register("hungry", HungryModifier::new);
     public static final StaticModifier<FootOdorModifier> FootOdor = MODIFIERS.register("foot_odor", FootOdorModifier::new);
     public static final StaticModifier<BlusterModifier> Bluster = MODIFIERS.register("bluster", BlusterModifier::new);
-    public static final StaticModifier<Modifier> HeavyWeight = MODIFIERS.register("heavy_weight", Modifier::new);
+    public static final StaticModifier<HeavyPoisonModifier> HeavyPoison = MODIFIERS.register("heavy_poison", HeavyPoisonModifier::new);
     public static final StaticModifier<FeedingModifier> Feeding = MODIFIERS.register("feeding", FeedingModifier::new);
     public static final StaticModifier<PoisonSparkleModifier> PoisonSparkle = MODIFIERS.register("poison_sparkle", PoisonSparkleModifier::new);
     public static final StaticModifier<PoisonErosionModifier> PoisonErosion = MODIFIERS.register("poison_erosion", PoisonErosionModifier::new);
