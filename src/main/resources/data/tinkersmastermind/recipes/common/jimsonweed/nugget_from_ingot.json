@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "group": "tconstruct:cobalt_ingot",
-  "ingredients": [{ "item": "tinkersmastermind:jimsonweed" }],
-  "result": {
-    "item": "tinkersmastermind:jimsonweed_nugget",
-    "count": 9
-  }
-}

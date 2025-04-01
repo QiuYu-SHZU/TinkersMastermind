@@ -1,7 +1,6 @@
 package net.qiuyu.tinkersmastermind.tinkering.modifier.defense;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.*;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -11,22 +10,17 @@ import net.minecraft.world.entity.LivingEntity;
 import net.qiuyu.tinkersmastermind.register.ModEffects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import slimeknights.mantle.data.predicate.damage.DamageSourcePredicate;
-import slimeknights.tconstruct.common.TinkerTags;
-import slimeknights.tconstruct.common.data.DamageTypeProvider;
 import slimeknights.tconstruct.library.modifiers.Modifier;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.armor.EquipmentChangeModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.armor.ModifyDamageModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.armor.OnAttackedModifierHook;
-import slimeknights.tconstruct.library.modifiers.hook.armor.ProtectionModifierHook;
 import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.context.EquipmentChangeContext;
 import slimeknights.tconstruct.library.tools.context.EquipmentContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 
-import java.lang.reflect.Field;
 import java.util.Random;
 
 public class PoisonSparkleModifier extends Modifier implements OnAttackedModifierHook, EquipmentChangeModifierHook, ModifyDamageModifierHook {

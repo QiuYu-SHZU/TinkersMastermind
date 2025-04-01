@@ -1,9 +1,7 @@
 {
   "type": "tconstruct:alloy",
   "inputs": [
-    { "tag": "tconstruct:venom",   "amount":   250 },
-    { "tag": "tconstruct:magma",   "amount":   250 },
-    { "tag": "tconstruct:slime",   "amount":   250 },
+    { "tag": "tconstruct:venom",   "amount":   125 },
     { "tag": "tconstruct:molten_rose_gold", "amount":  90 }
   ],
   "result": {
