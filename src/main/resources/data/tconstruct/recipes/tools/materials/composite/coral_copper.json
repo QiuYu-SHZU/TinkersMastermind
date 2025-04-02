@@ -5,6 +5,6 @@
     "tag": "tconstruct:molten_coral"
   },
   "input": "tconstruct:copper",
-  "output": "tconstruct:nahuatl",
+  "output": "tconstruct:coral_copper",
   "temperature": 1000
 }
