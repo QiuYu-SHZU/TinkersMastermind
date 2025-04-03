@@ -141,6 +141,7 @@ dependencies {
     modLocalRuntime "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"
     // IBE Editor
     modLocalRuntime "curse.maven:ibe-editor-256822:4994072"
+    modLocalRuntime "curse.maven:jade-324717:6106101"
     modImplementation "slimeknights.tconstruct:TConstruct:1.20.1-${tcon_version}"
     modImplementation "slimeknights.mantle:Mantle:1.20.1-${mantle_version}"
 }

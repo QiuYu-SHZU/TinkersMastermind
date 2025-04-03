@@ -102,7 +102,7 @@ public class BlusterModifier extends Modifier implements ProjectileHitModifierHo
     @Override
     public void addToolStats(IToolContext context, ModifierEntry modifierEntry, ModifierStatsBuilder builder) {
         if (context.hasTag(TinkerTags.Items.RANGED)){
-            ToolStats.DRAW_SPEED.multiply(builder,0.25f);
+            ToolStats.DRAW_SPEED.multiply(builder,0.5f);
         }
     }
 }

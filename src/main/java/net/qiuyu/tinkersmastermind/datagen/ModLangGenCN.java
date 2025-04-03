@@ -39,9 +39,11 @@ public class ModLangGenCN extends LanguageProvider {
         add("modifier.tinkersmastermind.poison_sparkle","毒性荆棘");
         add("modifier.tinkersmastermind.poison_erosion","毒性腐蚀");
         add("modifier.tinkersmastermind.heavy_poison","猛毒");
-
+        add("modifier.tinkersmastermind.double_shot","双头锥刺");
         add("modifier.tinkersmastermind.rotten.flavor","就像在炫腐肉.");
         add("modifier.tinkersmastermind.rotten.description","做出来的工具可以吃.");
+        add("modifier.tinkersmastermind.double_shot.flavor","AN94,但是在我的世界");
+        add("modifier.tinkersmastermind.double_shot.description","对目标在0.5s后再次施加一次相同的物理伤害.");
         add("modifier.tinkersmastermind.hungry.flavor","我说饿了吗?如饿.");
         add("modifier.tinkersmastermind.hungry.description","穿上护甲会获得饥饿效果.被攻击有概率回复饱食度.");
         add("modifier.tinkersmastermind.bluster.flavor","苦力怕发射器.");
